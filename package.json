@@ -1,11 +1,12 @@
 {
-  "name": "svelte-i18n",
+  "name": "@fullstax/svelte-i18n",
   "version": "4.0.0",
   "type": "module",
-  "main": "dist/runtime.js",
+  "main": "dist/runtime.cjs.js",
   "exports": {
     "types": "./dist/runtime.d.ts",
-    "default": "./dist/runtime.js"
+    "default": "./dist/runtime.js",
+    "module": "./dist/runtime.esm.js"
   },
   "types": "dist/runtime.d.ts",
   "bin": {
@@ -14,7 +15,7 @@
   "license": "MIT",
   "description": "Internationalization library for Svelte",
   "author": "Christian Kaisermann <christian@kaisermann.me>",
-  "repository": "https://github.com/kaisermann/svelte-i18n",
+  "repository": "https://github.com/fullstax/svelte-i18n",
   "keywords": [
     "svelte",
     "i18n",
@@ -33,13 +34,13 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu jest",
-    "test:ci": "pnpm test -- --silent",
+    "test:ci": "npm test -- --silent",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "format": "prettier --loglevel silent --write \"{src,test}/**/*.ts\"",
     "release": " git add package.json && git commit -m \"chore(release): v$npm_package_version :tada:\"",
-    "prebuild": "pnpm clean",
+    "prebuild": "npm run clean",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
-    "prepublishOnly": "pnpm test -- --no-cache && pnpm build && publint",
+    "prepublishOnly": "npm run test -- --no-cache && npm run build && publint",
     "prepare": "husky install"
   },
   "files": [
