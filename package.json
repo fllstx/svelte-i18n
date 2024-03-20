@@ -5,8 +5,7 @@
   "main": "dist/runtime.cjs.js",
   "exports": {
     "types": "./dist/runtime.d.ts",
-    "default": "./dist/runtime.js",
-    "module": "./dist/runtime.esm.js"
+    "default": "./dist/runtime.cjs.js"
   },
   "types": "dist/runtime.d.ts",
   "bin": {
@@ -15,7 +14,7 @@
   "license": "MIT",
   "description": "Internationalization library for Svelte",
   "author": "Christian Kaisermann <christian@kaisermann.me>",
-  "repository": "https://github.com/fullstax/svelte-i18n",
+  "repository": "https://github.com/fllstx/svelte-i18n",
   "keywords": [
     "svelte",
     "i18n",
